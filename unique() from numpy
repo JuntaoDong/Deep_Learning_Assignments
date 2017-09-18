@@ -1,0 +1,17 @@
+Python中numpy库unique函数解析
+
+1. 对于一维列表或数组A: 
+
+import numpy as np
+A = [1, 2, 2, 3, 4, 3]
+a = np.unique(A)
+print a            # 输出为 [1 2 3 4]
+a, b, c = np.unique(A, return_index=True, return_inverse=True)
+print a, b, c      # 输出为 [1 2 3 4], [0 1 3 4], [0 1 1 2 3 2]
+2. 对于二维数组(“darray数字类型”): 
+
+A = [[1, 2], [3, 4], [5, 6], [1, 2]]
+A = np.array(A)   #列表类型需转为数组类型
+a, b, c = np.unique(A.view(A.dtype.descr * A.shape[1]), return_index=True, return_inverse=True)
+print a, b, c     #输出为 [(1, 2) (3, 4) (5, 6)], [0 1 2], [0 1 2 0]
+可以看出, Python中unique函数与Matlab完全一致. 
