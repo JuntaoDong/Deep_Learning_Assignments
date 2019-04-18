@@ -1,1 +1,1 @@
-# Deep learning assignments for CS 6037 Deep Learning at University of Cincinnati
+# Deep learning assignments for CS6037 Deep Learning Spring 2018 at University of Cincinnati
